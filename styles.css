@@ -8,10 +8,10 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    width: 100px;
-    height: 100px;
-    background-color: pink;
+    transform: translate(-50%, -43%) rotate(-45deg);
+    width: 380px;
+    height: 380px;
+    background-color: rgb(231, 111, 121);
     animation-name: beat;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -19,28 +19,40 @@ body{
 .heart::before{
     content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: inherit;
+    height: inherit;
     border-radius: 50%;
-    background-color: pink;
-    bottom: 50px;
+    background-color: inherit;
+    bottom: 50%;
 }
 .heart::after{
     content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 50px;
+    width: inherit;
+    height: inherit;
+    left: 50%;
     border-radius: 50%;
-    background-color: pink;
+    background-color: inherit;
 }
 @keyframes back{
     50%{
-        background-color: #ffe6f2;
+        background-color: rgb(252, 218, 223);
     }
 }
 @keyframes beat{
     50%{
-        transform: translate(-50%, -50%) scale(0.8) rotate(-45deg);
+        transform: translate(-50%, -43%) scale(0.85) rotate(-45deg);
+    }
+}
+@media (max-width: 720px){
+    .heart{
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (max-height: 720px){
+    .heart{
+        width: 120px;
+        height: 120px;
     }
 }
