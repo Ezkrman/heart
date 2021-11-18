@@ -3,9 +3,7 @@
 }
 body{
     background-color: white;
-    animation-name: back;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation: back 1s infinite;
 }
 .heart{
     position: absolute;
@@ -15,9 +13,7 @@ body{
     width: var(--side);
     height: var(--side);
     background-color: rgb(231, 111, 121);
-    animation-name: beat;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation: beat 1s infinite;
 }
 .heart::before{
     content: '';
